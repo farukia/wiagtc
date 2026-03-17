@@ -6,6 +6,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    /* mobile fixes */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .container {
@@ -13,6 +17,10 @@ body {
     border: 1px solid #00ffcc;
     padding: 30px;
     width: 400px;
+
+    /* mobile */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 input {
@@ -22,6 +30,10 @@ input {
     padding: 10px;
     margin-top: 10px;
     width: 80%;
+
+    /* mobile */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 button {
@@ -31,6 +43,9 @@ button {
     padding: 10px;
     margin: 5px;
     cursor: pointer;
+
+    /* mobile */
+    max-width: 100%;
 }
 
 button:hover {
@@ -41,6 +56,9 @@ button:hover {
 #hint {
     margin-top: 15px;
     color: rgb(255, 255, 255);
+
+    /* mobile readability */
+    word-wrap: break-word;
 }
 
 #introOverlay {
@@ -55,6 +73,10 @@ button:hover {
     justify-content: center;
     align-items: center;
     z-index: 999;
+
+    /* mobile */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .introBox {
@@ -62,10 +84,38 @@ button:hover {
     padding: 30px;
     width: 400px;
     text-align: left;
+
+    /* mobile */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .introBox button {
     text-align: center;
 }
 
-v
+/* =========================
+   SMALL SCREEN ADJUSTMENTS
+========================= */
+
+@media (max-width: 500px) {
+    .container,
+    .introBox {
+        width: 100%;
+        padding: 20px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    body {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+}

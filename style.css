@@ -5,11 +5,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* FIX */
     min-height: 100vh;
-    height: auto;
-    padding: 10px;
+    padding: 15px;
     box-sizing: border-box;
 }
+
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 .container {
     text-align: center;
@@ -17,10 +22,14 @@ body {
     padding: 30px;
     width: 400px;
 
-    /* mobile */
+    /* FIX */
     max-width: 100%;
     box-sizing: border-box;
 }
+
+/* =========================
+   INPUT
+========================= */
 
 input {
     background: black;
@@ -29,8 +38,11 @@ input {
     padding: 10px;
     margin-top: 10px;
     width: 80%;
-    max-width: 100%;
 }
+
+/* =========================
+   BUTTONS
+========================= */
 
 button {
     background: black;
@@ -46,22 +58,32 @@ button:hover {
     color: black;
 }
 
+/* =========================
+   HINT
+========================= */
+
 #hint {
     margin-top: 15px;
     color: rgb(255, 255, 255);
 }
+
+/* =========================
+   INTRO OVERLAY (CENTERED FIX)
+========================= */
 
 #introOverlay {
     position: fixed;
     inset: 0;
     background: black;
     color: #00ffcc;
+
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 40px;
+    align-items: center; /* TRUE vertical centering */
+
     padding: 20px;
     box-sizing: border-box;
+
     z-index: 999;
 }
 
@@ -70,6 +92,7 @@ button:hover {
     padding: 30px;
     width: 400px;
     text-align: left;
+
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -78,25 +101,49 @@ button:hover {
     text-align: center;
 }
 
-/* small screen */
+/* =========================
+   MOBILE OVERRIDES
+========================= */
 
-@media (max-width: 100vw) {
-    .container,
-    .introBox {
-        padding: 20px;
-    }
+@media (max-width: 500px) {
 
-    input {
-        width: 100%;
-    }
-
-    button {
-        width: 100%;
-        margin: 6px 0;
-        padding: 8px;
+    /* BIGGER TEXT */
+    body {
+        font-size: 16px;
     }
 
     h1 {
-        font-size: 18px;
+        font-size: 22px;
+    }
+
+    #output {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* FULL WIDTH + BIGGER */
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .introBox {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* INPUT FULL WIDTH */
+    input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* BUTTONS STACK + BIGGER */
+    button {
+        width: 100%;
+        padding: 12px;
+        margin: 6px 0;
+        font-size: 16px;
     }
 }

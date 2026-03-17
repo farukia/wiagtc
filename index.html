@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>wiagtc</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+<body>
+
+<div id="introOverlay">
+  <div class="introBox">
+    <p>
+      hi :)<br><br>
+      i didn't learn to code for no reason. <br><br>
+      with love, <br>
+      ayesha
+    </p>
+    <div style="text-align: center; margin-top: 20px;">
+    <button onclick="closeIntro()" style="text-align: center;">Begin</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<h1>GUESS TIME</h1>
+
+<div id="output">
+> You asked for it.<br>
+> Each question correctly answered gives you a hint.<br>
+> Have fun.
+</div>
+
+<input type="text" id="input" placeholder="Enter code..." autofocus>
+
+<button onclick="submitCode()">Submit</button>
+<button onclick="showHint()">Show Question</button>
+
+<div id="hint"></div>
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

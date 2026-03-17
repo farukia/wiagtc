@@ -16,6 +16,8 @@ body {
     border: 1px solid #00ffcc;
     padding: 30px;
     width: 400px;
+
+    /* mobile */
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -78,7 +80,7 @@ button:hover {
 
 /* small screen */
 
-@media (max-width: 500px) {
+@media (max-width: 100vw) {
     .container,
     .introBox {
         padding: 20px;

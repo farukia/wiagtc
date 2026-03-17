@@ -5,31 +5,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* FIX */
     min-height: 100vh;
     padding: 15px;
     box-sizing: border-box;
 }
 
-/* =========================
-   MAIN CONTAINER
-========================= */
 
 .container {
     text-align: center;
     border: 1px solid #00ffcc;
     padding: 30px;
     width: 400px;
-
-    /* FIX */
     max-width: 100%;
     box-sizing: border-box;
 }
 
-/* =========================
-   INPUT
-========================= */
 
 input {
     background: black;
@@ -40,9 +30,6 @@ input {
     width: 80%;
 }
 
-/* =========================
-   BUTTONS
-========================= */
 
 button {
     background: black;
@@ -58,18 +45,13 @@ button:hover {
     color: black;
 }
 
-/* =========================
-   HINT
-========================= */
 
 #hint {
     margin-top: 15px;
     color: rgb(255, 255, 255);
 }
 
-/* =========================
-   INTRO OVERLAY (CENTERED FIX)
-========================= */
+
 
 #introOverlay {
     position: fixed;
@@ -79,7 +61,7 @@ button:hover {
 
     display: flex;
     justify-content: center;
-    align-items: center; /* TRUE vertical centering */
+    align-items: center; 
 
     padding: 20px;
     box-sizing: border-box;
@@ -101,13 +83,10 @@ button:hover {
     text-align: center;
 }
 
-/* =========================
-   MOBILE OVERRIDES
-========================= */
+
 
 @media (max-width: 500px) {
 
-    /* BIGGER TEXT */
     body {
         font-size: 16px;
     }
@@ -121,25 +100,22 @@ button:hover {
         line-height: 1.6;
     }
 
-    /* FULL WIDTH + BIGGER */
     .container {
-        width: 100%;
+        width: auto;
         padding: 20px;
     }
 
     .introBox {
-        width: 100%;
+        width: auto;
         padding: 20px;
     }
 
-    /* INPUT FULL WIDTH */
     input {
         width: 100%;
         padding: 12px;
         font-size: 16px;
     }
 
-    /* BUTTONS STACK + BIGGER */
     button {
         width: 100%;
         padding: 12px;

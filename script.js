@@ -36,7 +36,10 @@ function submitCode() {
         // FINAL STAGE WITH LIMITED ATTEMPTS
         if (input === answers[stage]) {
             stage++;
-            output.innerHTML += "<br>> Ya got it.<br><br>University of Pennsylvania<br><br> <i>if ya don't know it, google it.</i>";
+            output.innerHTML += "<br>> Ya got it.<br><br>University of Pennsylvania<br><br> <i>Leges sine moribus vanae.</i><br><i>'Laws without morals are useless'</i><br><br>";
+            output.innerHTML += "<button onclick=\"window.open('https://en.wikipedia.org/wiki/University_of_Pennsylvania', '_blank')\">wikipedia</button>";
+            output.innerHTML += "<button onclick=\"window.open('https://www.upenn.edu/', '_blank')\">official</button>";
+             output.innerHTML += "<button onclick=\"window.open('https://www.usnews.com/best-colleges/university-of-pennsylvania-3378/', '_blank')\">u.s. news</button>";
             inputField.disabled = true;
             button.disabled = true;
 
@@ -81,7 +84,7 @@ function submitCode() {
         // NORMAL STAGES
         if (input === answers[stage]) {
             stage++;
-            output.innerHTML += "<br>> Correct.<br>> Enter next authorization:";
+            output.innerHTML += "<br>> Correct.<br>> Next question!:";
             document.getElementById("hint").innerHTML = "";
         } else {
             output.innerHTML += "<br>> Incorrect.";
